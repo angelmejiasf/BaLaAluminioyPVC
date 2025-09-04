@@ -1,8 +1,8 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'u370401672_areaprivada');
-define('DB_USER', 'u370401672_BaLaAdmin');
-define('DB_PASS', 'BaLaAdmin0225');
+define('DB_NAME', '');
+define('DB_USER', '');
+define('DB_PASS', '');
 
 try {
     $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
