@@ -31,7 +31,7 @@ Este proyecto proporciona:
 - **[PHP](https://github.com/angelmejiasf/BaLaAluminioyPVC/search?l=php)**  
 - **[CSS](https://github.com/angelmejiasf/BaLaAluminioyPVC/search?l=css)**  
 - **[JavaScript](https://github.com/angelmejiasf/BaLaAluminioyPVC/search?l=javascript)**  
-- **[MySQL](https://github.com/angelmejiasf/BaLaAluminioyPVC/search?l=sql)** 
+- **[MySQL](https://github.com/angelmejiasf/BaLaAluminioyPVC/config.php)** 
 
 
 ## Características
