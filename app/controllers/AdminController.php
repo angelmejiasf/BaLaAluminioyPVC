@@ -831,7 +831,7 @@ class AdminController {
 
         // Observaciones
         $pdf->SetFont('DejaVu', '', 9);
-        $observaciones = "Observaciones:\n- Número de cuenta para la transferencia: ES46 0049 0772 6927 1075 2452\n- Los precios incluyen IVA.\n- El plazo de entrega máximo es de 6 semanas desde la aprobación del presupuesto.\n- El pago se realizará en dos plazos: 50% al inicio y 50% al finalizar.\n- La garantía es de 5 años.\n- Este presupuesto es válido durante 30 días naturales desde la emisión.";
+        $observaciones = "Observaciones:\n- Número de cuenta para la transferencia: **\n- Los precios incluyen IVA.\n- El plazo de entrega máximo es de 6 semanas desde la aprobación del presupuesto.\n- El pago se realizará en dos plazos: 50% al inicio y 50% al finalizar.\n- La garantía es de 5 años.\n- Este presupuesto es válido durante 30 días naturales desde la emisión.";
         $pdf->MultiCell(0, 6, $observaciones, 0, 'L');
 
         $pdf->SetFont('DejaVu', 'I', 8);
