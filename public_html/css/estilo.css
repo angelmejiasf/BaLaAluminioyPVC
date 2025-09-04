@@ -1,0 +1,482 @@
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+/* Estilo para el icono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;  /* Ajusta la distancia desde el borde inferior */
+    right: 20px;   /* Ajusta la distancia desde el borde derecho */
+    z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+  }
+  
+  .whatsapp-icon img {
+    width: 60px;  /* Ajusta el tamaño del icono */
+    height: 60px;
+    border-radius: 50%;  /* Hace el icono circular */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); Sombra suave para el icono */
+  }
+  
+  .whatsapp-icon img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* HEADER */
+
+header {
+    position: fixed; /* Hace que el header permanezca fijo */
+    top: 0; /* Lo fija en la parte superior */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: black; /* Color de fondo */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+.logo img {
+    width: 120px; /* Ajusta el tamaño del logo */
+}
+
+.nombre{
+    color: #74EF58;
+    
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+nav ul li a:hover {
+    color: #74EF58;
+}
+
+.areaprivada:hover , a:hover{
+    color: #74EF58;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+/* Estilo para el enlace 'Servicios' que activa el desplegable */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilo para el submenú (el desplegable) */
+.dropdown-content {
+    display: none; /* Ocultamos el submenú por defecto */
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+
+a i {
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+a i:hover{
+    color: #74EF58;
+}
+/* Secciones */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 110px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+   
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Estilos para el texto dentro del carrusel */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    /* Mueve el texto a la izquierda */
+    transform: translateY(-50%);
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    /* Ajusta el ancho para que no ocupe toda la imagen */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    /* Sombra para destacar el texto */
+}
+
+/* Ajustes en los títulos y párrafos dentro del carrusel */
+.carousel-text h2 {
+    font-size: 2em;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    /* Sombra en el texto */
+}
+
+.carousel-text p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    /* Sombra en el texto */
+}
+
+.slide.active {
+    opacity: 1;
+    /* Mostrar solo la imagen activa */
+}
+
+.slide img {
+    width: 100%;
+    height: 600px;
+    /* Ajusta según necesidad */
+    object-fit: cover;
+}
+
+
+/* Botones de navegación */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.tarjeta .img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    height: 200px; /* Ajusta la altura de todas las imágenes al mismo tamaño */
+    object-fit: cover; /* Recorta la imagen para que encaje sin distorsionarse */
+    border-radius: 8px; /* Opcional: para esquinas redondeadas */
+}
+
+/* Ubi */
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+#nosotros {
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+}
+
+.ubi , .tlf{
+    display: flex;
+    align-items: center;
+}
+/* BOTON */
+.info-btn{
+    padding: 15px 30px; /* Espaciado interno del botón */
+    background-color: black; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    font-size: 1.2em; /* Tamaño de la fuente */
+    border: none; /* Elimina los bordes predeterminados */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave al pasar el ratón */
+    text-align: center; /* Centra el texto dentro del botón */
+    
+}
+
+.info-btn{
+   margin: 20px 20px 20px 20px;
+}
+/* Estilo para el botón de contacto */
+.contacto-btn {
+    padding: 15px 30px; /* Espaciado interno del botón */
+    background-color: black; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    font-size: 1.2em; /* Tamaño de la fuente */
+    border: none; /* Elimina los bordes predeterminados */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave al pasar el ratón */
+    text-align: center; /* Centra el texto dentro del botón */
+    opacity: 0; /* Oculto al inicio */
+    transform: translateX(50px); /* Desplazado hacia abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+.contacto-btn.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Efecto hover para el botón */
+.contacto-btn:hover ,.info-btn:hover{
+    /* background-color: #555; Fondo más claro al pasar el ratón */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto active para cuando se hace clic en el botón */
+.contacto-btn:active {
+    background-color: #444; /* Fondo aún más oscuro al hacer clic */
+    transform: scale(1); /* Vuelve al tamaño original */
+}
+
+/* TARJETAS  */
+
+/* Estilo para la nueva sección */
+#productos {
+    padding: 40px 20px; /* Espaciado interno */
+    text-align: center; /* Centra todo el contenido */
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+#productos h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor de las tarjetas */
+.tarjetas-container {
+    display: flex;
+    justify-content: space-around; /* Espacia las tarjetas equitativamente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
+}
+
+/* Estilo para cada tarjeta */
+.tarjeta {
+    background-color: white;
+    border: 1px solid #ddd; /* Borde de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    width: 250px; /* Ancho fijo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    text-align: center;
+    padding: 20px;
+    /* transition: transform 0.3s ease-in-out; */
+    will-change: transform; /* Mejora el rendimiento en navegadores */
+    opacity: 0; /* Oculta las tarjetas inicialmente */
+    transform: translateY(50px); /* Las mueve hacia abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Clase que se agregará con JS cuando las tarjetas sean visibles */
+.tarjeta.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Imagen dentro de la tarjeta */
+.tarjeta img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 8px; /* Bordes redondeados en la imagen */
+}
+
+.tarjeta:hover{
+    transform: scale(1.08);
+    /* transition: all 0.3s ease-in-out; */
+}
+/* Título y texto debajo de la imagen */
+.tarjeta h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+}
+
+.tarjeta p {
+    font-size: 1em;
+    color: #777;
+    margin-top: 10px;
+}
+
+.cualelegir,.colaboradores {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+.cualelegir-img {
+    width: 20%;
+    /* max-width: 400px; */
+    display: inline-block;
+}
+
+
+
+/* Footer */
+footer {
+    background-color:black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+    
+}
+.partelegal{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    color: #74EF58;
+}
+
+/* 🟢 Estilos para el Menú en Móviles */
+
+@media (max-width: 500px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px; 
+        right: 80px;
+        background-color: #333;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .planrenove-img{
+        width: 250px;
+    }
+  
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .menu-icon:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    nav.show {
+        display: block;
+    }
+
+  
+    
+   
+    
+   #nosotros{
+    display: block !important;
+   }
+   .tlf{
+    justify-content: center;
+    
+   }
+    
+   .carousel-text{
+    width: 80% !important;
+    left: 50% !important; /* Mueve el cuadro al centro */
+    transform: translate(-50%, -50%) !important; /* Corrige el desplazamiento */
+    text-align: center !important; /* Centra el texto dentro del cuadro */
+    /* width: 70% !important; */
+   }
+    
+   .cualelegir-img {
+    width: 40%;
+    /* max-width: 400px; */
+    display: inline-block;
+}
+    
+    
+}
+
+@media (max-width: 866px) {
+    .nombre{
+        display: none;
+    }
+    
+}

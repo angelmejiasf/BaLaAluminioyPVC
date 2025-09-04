@@ -1,0 +1,365 @@
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo para el icono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;  /* Ajusta la distancia desde el borde inferior */
+    right: 20px;   /* Ajusta la distancia desde el borde derecho */
+    z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+  }
+  
+  .whatsapp-icon img {
+    width: 60px;  /* Ajusta el tamaño del icono */
+    height: 60px;
+    border-radius: 50%;  /* Hace el icono circular */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); Sombra suave para el icono */
+  }
+  
+  .whatsapp-icon img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+header {
+    position: fixed; /* Hace que el header permanezca fijo */
+    top: 0; /* Lo fija en la parte superior */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: black; /* Color de fondo */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+.logo img {
+    width: 120px; /* Ajusta el tamaño del logo */
+}
+
+.nombre{
+    color: #74EF58;
+    
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+nav ul li a:hover {
+    color: #74EF58;
+}
+
+/* Estilo para el enlace 'Servicios' que activa el desplegable */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.areaprivada:hover , a:hover{
+    color: #74EF58;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a i {
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+a i:hover{
+    color: #74EF58;
+}
+/* Estilo para el submenú (el desplegable) */
+.dropdown-content {
+    display: none; /* Ocultamos el submenú por defecto */
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+table {
+    margin: 32px auto;              /* Centra la tabla horizontalmente */
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.08);
+}
+
+th, td {
+    padding: 14px 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #256190;
+    color: #fff;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f6fa;
+}
+
+tr:nth-child(odd) {
+    background-color: #e9eef3;
+}
+
+td {
+    font-size: 1em;
+    color: #2e2e2e;
+    border-bottom: 1px solid #e0e7ef;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Opcional: Responsive */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    th, td {
+        box-sizing: border-box;
+        padding: 12px 8px;
+    }
+    th {
+        text-align: left;
+    }
+}
+
+
+/* NOSOTROS */
+
+.cualelegir{
+    background-color: #f4f4f4; /* Fondo suave */
+    padding-left: 40px;
+    text-align: center;
+}
+
+.cualelegir .contenido {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.cualelegir h1 {
+    color: #333;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.cualelegir h2 {
+    color: #333;
+    font-size: 2 rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cualelegir h3 {
+    color: #444;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cualelegir p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.cualelegir ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cualelegir ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    background-size: 20px;
+    padding-left: 30px;
+}
+
+/* MAPA */
+
+.mapa{
+    text-align: center;
+    padding: 40px 20px;
+    /* width: 100%; */
+}
+
+/* Footer */
+footer {
+    background-color:black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+    
+}
+.partelegal{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    color: #74EF58;
+}
+
+/* 🟢 Estilos para el Menú en Móviles */
+@media (max-width: 930px) {
+    .redessociales{
+    display: none;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px; 
+        right: 80px;
+        background-color: #333;
+        width: 150px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .menu-icon:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    nav.show {
+        display: block;
+    }
+
+    .container{
+        display: block !important;
+    }
+
+    .cualelegir{
+        margin-top: 150px !important;
+        width: 80% !important;
+    }
+    .imgportada{
+        width: 100% !important;
+        height: 0% !important;
+        
+    }
+}
+
+@media (max-width: 866px) {
+    .nombre{
+        display: none;
+    }
+    
+}
+
+/* Estilo para el botón de contacto */
+.contacto-btn {
+    padding: 15px 30px; /* Espaciado interno del botón */
+    background-color: black; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    font-size: 1.2em; /* Tamaño de la fuente */
+    border: none; /* Elimina los bordes predeterminados */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave al pasar el ratón */
+    text-align: center; /* Centra el texto dentro del botón */
+    opacity: 0; /* Oculto al inicio */
+    transform: translateX(50px); /* Desplazado hacia abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+.contacto-btn.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Efecto hover para el botón */
+.contacto-btn:hover ,.info-btn:hover{
+    /* background-color: #555; Fondo más claro al pasar el ratón */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto active para cuando se hace clic en el botón */
+.contacto-btn:active {
+    background-color: #444; /* Fondo aún más oscuro al hacer clic */
+    transform: scale(1); /* Vuelve al tamaño original */
+}
