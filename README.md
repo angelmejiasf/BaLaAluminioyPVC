@@ -1,5 +1,6 @@
 # BaLa Aluminio y PVC
-![Logo](https://github.com/angelmejiasf/BaLaAluminioyPVC/blob/main/assets/logo.png?raw=true)
+![Logo BaLa Aluminio y PVC](public_html/assets/images/logo.jpg)
+
 
 ---
 
