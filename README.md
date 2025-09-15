@@ -30,12 +30,10 @@ Este proyecto proporciona:
 ## Tecnologías Utilizadas
 
 - **[PHP](https://github.com/angelmejiasf/BaLaAluminioyPVC/search?l=php)**  
-- **HTML**  
 - **[CSS](https://github.com/angelmejiasf/BaLaAluminioyPVC/search?l=css)**  
 - **[JavaScript](https://github.com/angelmejiasf/BaLaAluminioyPVC/search?l=javascript)**  
 - **MySQL** (conexión configurada en PHPMyAdmin a través de la carpeta `config`)
 
-> **Importante:** La configuración de la conexión a la base de datos está en la carpeta `config`.
 
 ## Características
 
