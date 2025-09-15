@@ -1,6 +1,10 @@
 # BaLa Aluminio y PVC
 
 ---
+<p align="left">
+  <img src="public_html/assets/images/logo.jpg" alt="Logo BaLa" width="50" style="vertical-align:middle;" />
+  <span style="font-size: 2em; font-weight: bold; vertical-align: middle;"> BaLa Aluminio y PVC</span>
+</p>
 
 Página web para la empresa **BaLa Aluminio y PVC**, dedicada a la gestión y comunicación eficiente entre gerentes y clientes. Incluye módulos avanzados para manejo de presupuestos, facturación y administración de usuarios para gerentes, así como un área de clientes para facilitar la interacción y la firma digital de documentos.
 
