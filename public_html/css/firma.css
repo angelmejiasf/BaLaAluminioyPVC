@@ -1,0 +1,126 @@
+body {
+  background: linear-gradient(135deg, #e3eeff 0%, #f4f6fb 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Contenedor principal centrado */
+.presupuesto-info {
+  max-width: 700px;
+  margin: 40px auto 20px auto;
+  background: #f9fbfd;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 6px 24px rgba(44, 62, 80, 0.12);
+  color: #256190;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.presupuesto-info h2 {
+  margin-bottom: 16px;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.presupuesto-info p {
+  font-size: 1.1em;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* Contenedor del canvas y botones */
+.firma-container {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  padding: 24px 32px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(44, 62, 80, 0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Canvas para la firma */
+#canvas-firma {
+  width: 350px;
+  height: 150px;
+  border: 2px solid #333;
+  touch-action: none;
+}
+
+/* Botones de firma */
+.firma-botones {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 620px;
+}
+
+.firma-botones .panel-button {
+  flex: 1 1 140px;
+  padding: 14px 0;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.firma-botones .panel-button:hover {
+  background-color: #5fd143;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(33, 150, 243, 0.12);
+}
+
+/* Botón Limpiar con estilo diferente */
+.firma-botones .panel-button[style] {
+  background-color: #eaeaea !important;
+  color: #444 !important;
+  border: 1px solid #bbb !important;
+}
+
+.firma-botones .panel-button[style]:hover {
+  background-color: #d4d4d4 !important;
+  color: #222 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Enlace Cancelar con estilo similar, pero gris */
+.firma-botones a.panel-button {
+  background: #bababa !important;
+  color: #222 !important;
+  text-align: center;
+  text-decoration: none;
+}
+
+.firma-botones a.panel-button:hover {
+  background: #999 !important;
+  color: #111 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Responsive móvil */
+@media (max-width: 640px) {
+  .presupuesto-info, .firma-container {
+    padding: 16px 12px;
+    margin: 20px 12px;
+  }
+
+  #canvas-firma {
+    height: 140px;
+  }
+
+  .firma-botones {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,289 @@
+body {
+  background: linear-gradient(135deg, #e3eeff 0%, #f1f1f1 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 440px;
+  margin: 60px auto 0 auto;
+  padding: 36px 32px 28px 32px;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(44, 62, 80, 0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="date"] {
+  display: block;          /* Hace que ocupe toda la línea */
+  margin: 0 auto 12px auto;/* Centra el input horizontalmente */
+  text-align: center;      /* Centra el texto dentro del input (funciona en algunos navegadores) */
+  width: 100%;
+  max-width: 280px;        /* Ajusta el ancho si lo usas en otros inputs */
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+
+h2 {
+  color: #256190;
+  margin-bottom: 28px;
+  font-size: 1.6em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+label {
+  color: #2d3a4b;
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+  text-align: center;
+}
+
+select, textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Opcional, para centrar el texto dentro */
+  max-width: 100%; /* Para que no se desborden del contenedor */
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 11px 14px;
+  margin-bottom: 15px;
+  border: 1.5px solid #b8c6d1;
+  border-radius: 7px;
+  box-sizing: border-box;
+  font-size: 1em;
+  background: #f9fbfd;
+  color: #2d3a4b;
+  transition: border-color 0.2s, background 0.2s;
+  text-align: center;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  border-color: #2196f3;
+  background: #f1f7ff;
+  outline: none;
+}
+
+
+input[type="file"] {
+  margin-bottom: 18px;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #74EF58;
+  color: #222;
+  border: none;
+  padding: 13px 0;
+  border-radius: 8px;
+  font-size: 1.08em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.09);
+  transition: background 0.2s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #5fd143;
+  color: #222;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(33, 150, 243, 0.12);
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: #e0ffe0;
+  color: #006600;
+  border: 1px solid #00aa00;
+  border-radius: 6px;
+  font-size: 1em;
+  text-align: center;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    margin: 30px 8px;
+    padding: 18px;
+  }
+  .success-message {
+    max-width: 98vw;
+  }
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: red;
+  color: #222;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 1.08em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.09);
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+  justify-content: center;
+  border: 1.5px solid red;
+}
+.back-button i {
+  font-size: 1.1em;
+}
+.back-button:hover {
+  background-color: red;
+  color: #222;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(33, 150, 243, 0.12);
+}
+
+select {
+  width: 100%;
+  padding: 11px 14px;
+  margin-bottom: 15px;
+  border: 1.5px solid #b8c6d1;
+  border-radius: 7px;
+  background: #f9fbfd;
+  color: #2d3a4b;
+  font-size: 1em;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s, background 0.2s;
+  text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='gray' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+}
+
+select:focus {
+  border-color: #2196f3;
+  background: #f1f7ff;
+  outline: none;
+}
+
+.estado.aceptado {
+  background: #e6ffed;
+  color: #198754;
+  border: 1.5px solid #82e6b2;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.estado.rechazado {
+  background: #ffeaea;
+  color: #c0392b;
+  border: 1.5px solid #e57373;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.estado.enviado {
+  background: #e6f0ff;
+  color: #2563eb;
+  border: 1.5px solid #60a5fa;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.label-imagen {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+input[type="file"] {
+  margin-left: 10px;
+  font-size: 0.95em;
+}
+
+
+.añadir-button,.panel-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #74EF58;
+  color: #222;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 1.08em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.09);
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+  justify-content: center;
+  border: 1.5px solid #5fd143;
+}
+.añadir-button i ,.panel-button i {
+  font-size: 1.1em;
+}
+.añadir-button:hover, .panel-button:hover {
+  background-color: #5fd143;
+  color: #222;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(33, 150, 243, 0.12);
+}
+
+
+.concepto-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  background: #f9f9ff;
+  border-radius: 8px;
+  padding: 10px 5px;
+}
+.input-imagen {
+  padding: 2px 0;
+}
+
+.preview-imagen {
+  border: 1px solid #b8c6d1;
+  border-radius: 5px;
+}
+
+.concepto-textarea {
+  width: 100%;       /* ocupa todo el ancho del contenedor */
+  min-height: 100px; /* altura mínima */
+  resize: vertical;  /* el usuario puede ajustar solo vertical */
+  padding: 6px;
+  font-size: 14px;
+}
+
+.panel-button{
+
+}

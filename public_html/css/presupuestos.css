@@ -1,0 +1,267 @@
+body {
+  background: linear-gradient(135deg, #e3eeff 0%, #f1f1f1 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.table-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(44, 62, 80, 0.13);
+  padding: 32px 20px 24px 20px;
+  text-align: center;
+}
+
+
+.presupuestos-table td.descripcion {
+  max-width:200px;       /* Ajusta el ancho máximo que prefieras */
+  white-space: normal;    /* Permite que el texto haga salto de línea */
+  word-wrap: break-word;  /* Rompe palabras muy largas para que no desborden */
+  overflow-wrap: break-word; /* Compatibilidad con navegadores */
+  text-align: left;       /* Alinea texto a la izquierda para mejor lectura */
+}
+
+.presupuestos-table th, .presupuestos-table td {
+  border: 1px solid #e3e3e3;
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.presupuestos-table th {
+  background: #eaf4fc;
+  color: #256190;
+  font-weight: 700;
+}
+
+.presupuestos-table tr:nth-child(even) {
+  background: #f9fbfd;
+}
+
+.presupuestos-table tr:hover {
+  background: #e3eeff;
+}
+
+@media (max-width: 700px) {
+  .table-container {
+    padding: 10px 2px;
+  }
+  .presupuestos-table th, .presupuestos-table td {
+    padding: 6px 2px;
+    font-size: 0.95em;
+  }
+}
+
+.div_volver,
+.div_crear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.back-button,
+.panel-button {
+  /* Tus estilos de botón, por ejemplo: */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #74EF58;
+  color: #222;
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.08em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.09);
+  transition: background-color 0.2s, transform 0.2s;
+  border: none;
+  justify-content: center;
+}
+
+.back-button i,
+.panel-button i {
+  font-size: 1.1em;
+}
+
+.back-button:hover,
+.panel-button:hover {
+  background-color: #5fd143;
+  color: #222;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(33, 150, 243, 0.12);
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.15em;
+  margin: 0 4px;
+  text-decoration: none;
+  color: #256190;
+  background: #eaf4fc;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.action-btn.edit-btn:hover {
+  background: #74EF58;
+  color: #222;
+  transform: scale(1.08);
+}
+
+.action-btn.delete-btn {
+  color: #c0392b;
+  background: #ffeaea;
+}
+
+.action-btn.delete-btn:hover {
+  background: #e74c3c;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.mensaje_presupuesto,
+.success-message {
+  margin: 24px auto 0 auto;
+  max-width: 450px;
+  background: #e0ffe0;
+  color: #006600;
+  border-left: 5px solid #74EF58;
+  border-radius: 6px;
+  padding: 16px 22px 16px 18px;
+  font-size: 1.08em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.06);
+  font-weight: 500;
+}
+
+.mensaje_presupuesto i,
+.success-message i {
+  font-size: 1.4em;
+  color: #74EF58;
+  flex-shrink: 0;
+}
+
+/* Para mensajes de error, puedes usar: */
+.error-message {
+  margin: 24px auto 0 auto;
+  max-width: 450px;
+  background: #ffeaea;
+  color: #c0392b;
+  border-left: 5px solid #e74c3c;
+  border-radius: 6px;
+  padding: 16px 22px 16px 18px;
+  font-size: 1.08em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.08);
+  font-weight: 500;
+}
+
+.error-message i {
+  font-size: 1.4em;
+  color: #e74c3c;
+  flex-shrink: 0;
+}
+
+.pdf-link {
+  color: #d32f2f;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+.pdf-link:hover {
+  color: #b71c1c;
+  text-decoration: underline;
+}
+.pdf-link i {
+  font-size: 1.2em;
+}
+
+.filtro-form label {
+  font-weight: 600;
+  color: #256190;
+  margin-right: 10px;
+}
+
+.filtro-form select {
+  padding: 10px 14px;
+  border: 1.5px solid #b8c6d1;
+  border-radius: 7px;
+  background: #f9fbfd;
+  color: #2d3a4b;
+  font-size: 1em;
+  font-family: inherit;
+  margin-bottom: 18px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.07);
+}
+
+.filtro-form select:focus {
+  border-color: #2196f3;
+  background: #f1f7ff;
+  box-shadow: 0 0 0 2px #d0e6fa;
+}
+
+.filtro-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+
+.estado {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.98em;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+
+.estado.aceptado {
+  background: #e6ffed;
+  color: #198754;
+  border: 1.5px solid #82e6b2;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.estado.rechazado {
+  background: #ffeaea;
+  color: #c0392b;
+  border: 1.5px solid #e57373;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.estado.enviado {
+  background: #e6f0ff;
+  color: #2563eb;
+  border: 1.5px solid #60a5fa;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
